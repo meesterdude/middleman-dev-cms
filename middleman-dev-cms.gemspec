@@ -4,7 +4,7 @@ require 'middleman/dev/cms/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "middleman-dev-cms"
-  spec.version       = Middleman::Blog::Ui::VERSION
+  spec.version       = Middleman::Dev::Cms::VERSION
   spec.authors       = ["Russell Jennings", "Will Schenk"]
   spec.email         = ["violentpurr@gmail.com", 'wschenk@gmail.com']
 

@@ -1,11 +1,7 @@
 require 'spec_helper'
 
-describe Middleman::Blog::Ui do
+describe Middleman::Dev::Cms do
   it 'has a version number' do
-    expect(Middleman::Blog::Ui::VERSION).not_to be nil
-  end
-
-  it 'does something useful' do
-    expect(false).to eq(true)
+    expect(Middleman::Dev::Cms::VERSION).not_to be nil
   end
 end

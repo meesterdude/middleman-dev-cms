@@ -1,19 +1,18 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'middleman/blog/ui/version'
+$:.push File.expand_path("../lib", __FILE__)
+require 'middleman/dev/cms/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "middleman-blog-ui"
+  spec.name          = "middleman-dev-cms"
   spec.version       = Middleman::Blog::Ui::VERSION
-  spec.authors       = ["Will Schenk"]
-  spec.email         = ["wschenk@gmail.com"]
+  spec.authors       = ["Russell Jennings", "Will Schenk"]
+  spec.email         = ["violentpurr@gmail.com", 'wschenk@gmail.com']
 
-  spec.summary       = %q{Basic web UI for a middleman-blog.}
-  spec.description   = %q{Basic web UI for a middleman-blog.}
-  spec.homepage      = "https://github.com/HappyFunCorp/middleman-blog-ui"
+  spec.summary       = %q{Developer focused CMS for middleman}
+  spec.description   = %q{Provides CRUD abilities for pages as well as git operations when running server}
+  spec.homepage      = "https://github.com/meesterdude/middleman-dev-cms"
   spec.license       = "MIT"
-
+  spec.platform    = Gem::Platform::RUBY
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
@@ -28,11 +27,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # spec.add_dependency "middleman-react"
-  spec.add_dependency "sprockets-coffee-react"
-  spec.add_dependency "sinatra"
-  spec.add_dependency "sinatra-contrib"
-  spec.add_dependency "react-source"
-  spec.add_dependency "bootstrap-sass"
+
+  spec.add_dependency "sinatra", "~> 1.4"
   spec.add_development_dependency "bundler", "~> 1.9"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_runtime_dependency("middleman-core", [">= 3.3"])
 end

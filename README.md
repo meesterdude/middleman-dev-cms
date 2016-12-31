@@ -1,37 +1,17 @@
-# Middleman::Blog::Ui
+# Middleman Dev CMS
 
-This gem is mean to work with an exitisting middleman site, that uses both middleman-blog and middleman-blog-drafts.
+This gem is a sinatra app meant to work with an a local middleman server to provide CRUD actions as well as integrate with git (coming soon!)
 
-More information on how it works can be found on my blog, at http://willschenk.com/building-a-gui-for-managing-middleman-blogs/
+based on the the `middleman-blog-ui` gem
 
 ## Installation
 
-
-Given a middleman app with `middleman-blog` and `middleman-blog-drafts` configured:
-
-1. Add `middleman-blog-ui` in your `Gemfile`.
-2. Add `activate :blog_ui` in `config.rb`
+1. Add `middleman-dev-cms` in your `Gemfile`.
+2. Add `activate :dev_cms` in `config.rb`
 3. Start `middleman server`
-4. Visit [http://localhost:4567/admin](http://localhost:4567/admin).
+4. visit `/cms` + a page, such as [http://localhost:4567/cms/any/page/to/edit.html](http://localhost:4567/cms/any/page/to/edit.html) and you can create, update, move, rename and delete files from the middleman server
 
-And now you are living in the fabulous world where you can, from your browser:
-
-- Edit existing drafts and posts
-- Create new drafts
-- Publish drafts into posts
-- Run some basic `git` commands.
-- Run `middleman build`
-- Run `middleman deploy`
-
-## Next steps
-
-This is mainly a proof of concept, but I'm using it right now to write this post.  The app itself needs
-
-1. A decent UI
-2. Support for other static generators other than middleman
-3. A concept of users
-4. Shared drafts
-5. Better error handling
+Still a work in progress! Better docs to come.
 
 ## Development
 
@@ -41,7 +21,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/middleman-blog-ui/fork )
+1. Fork it ( https://github.com/[my-github-username]/middleman-dev-cms/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

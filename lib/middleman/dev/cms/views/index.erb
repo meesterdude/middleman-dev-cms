@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+  <style>
+    body{background-color: #def;}
+    #filepath{font-size: 1.4em;width:100%;}
+    textarea{font-size: 1.3em;padding:8px;}
+    input[type='submit']{
+      font-size: 1.2em;
+      margin-top:20px;
+      padding:8px 10px;
+      background-color: #2d0;
+      border:none;
+      border-bottom:5px solid #2b0;
+      color:white;
+      border-radius: 5px;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>Middleman Dev CMS</h1>
+    <form method='post' action='/cms'>
+    <input id='filepath' type="text" name="filepath" value="<%= filepath %>"><br><br>
+    <textarea id='content' name='content' rows="40" cols = "150" ><%= content %></textarea>
+    <input id='submit' type="hidden" name="originalfilepath" value="<%= filepath %>">
+    <br>
+    <input type='submit' value ='Save'>
+    </form>
+  </body>
+</html>

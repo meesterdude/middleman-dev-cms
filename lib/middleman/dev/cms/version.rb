@@ -1,6 +1,6 @@
 module Middleman
   module Dev
-    module CMS
+    module Cms
       VERSION = "0.2.0"
     end
   end
